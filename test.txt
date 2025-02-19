@@ -1,0 +1,13 @@
+import google.generativeai as genai
+
+# Configure API key
+genai.configure(api_key="AIzaSyDsAVc-Jpsf5yi-2fhoZR3YMLuTpEFEBzM")
+
+# Load the model
+model = genai.GenerativeModel("gemini-1.5-flash")
+
+# Generate content
+response = model.generate_content("Explain how AI works")
+
+# Print the response
+print(response.text)
