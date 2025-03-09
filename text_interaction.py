@@ -8,3 +8,7 @@ def handle_text_interaction(model):
     if button and user_input:
         response = model.generate_content(user_input)
         st.write(response.text)
+
+        return {"user_input": user_input, "response": response.text}  # ✅ Return response
+
+    return None  # ✅ Return None if no response
