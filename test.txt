@@ -11,3 +11,16 @@ response = model.generate_content("Explain how AI works")
 
 # Print the response
 print(response.text)
+
+# Get API key from Streamlit Secrets
+API_KEY = st.secrets["GENAI_API_KEY"]
+
+
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get MongoDB credentials from .env
+MONGO_URI = os.getenv("MONGO_URI")
+DB_NAME = os.getenv("DB_NAME")
+COLLECTION_NAME = os.getenv("COLLECTION_NAME")
